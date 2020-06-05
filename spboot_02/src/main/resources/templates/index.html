@@ -1,0 +1,53 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link>
+
+    <title>首页</title>
+</head>
+<body>
+
+    <h3 th:text="${title}" ></h3>
+
+    输入框：<input type="text" th:value="${userName}"/>
+
+    <br/><br/>
+
+    按钮：<input type="button" th:value="${btnName}"/>
+
+    <br/><br/>
+
+    美女：
+    <img th:src="${girlSrc}" width="300px">
+
+
+    <br/><br/>
+
+    测试空变量：
+    <span th:text="${mySp}"></span>
+
+    <br/><br/>
+    <p style="text-align: center">用户列表</p>
+
+    <table border="1" width="100%">
+
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+
+        <tr th:each="user : ${userList}" style="text-align: center">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.userName}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>
