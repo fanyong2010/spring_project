@@ -8,16 +8,10 @@ public class User {
 
     private Integer age;
 
-    // 我是测试
+    // 我是测试，哈哈
 
     public User() {
 
-    }
-
-    public User(Long id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
     }
 
     @Override
